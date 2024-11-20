@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сложный пример CSS Grid</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Контейнер сетки */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 7;
+ grid-template-rows: 3 3 6 1 ;
+align-content: center;
+
+    gap: 22px;
+  
+    max-width: 1500px;
+    margin: auto;
+    padding: 20px 0;
+  }
+
+  /* Цветные элементы сетки */
+  .item1 { background-color: #4D96FF; grid-column: 7 / span 1; grid-row: 30 / span 1; justify-items: end; align-items: end; }
+  .item2 { background-color: #FFB6B9; grid-column: 1 / span 1; grid-row: 13 / span 15; }
+  .item3 { background-color: #A1E8AF; grid-column: 1 / span 3; grid-row: 1 / span 6; }
+  .item4 { background-color: #FFE156; grid-column: 4 / span 3; grid-row: 1 / span 6; }
+  .item5 { background-color: #FF9F1C; grid-column: 1 / span 6; grid-row:  7 / span 6; }
+
+  /* Оформление элементов сетки */
+  .grid-item {
+    color: white;
+  display: flex; /* Используем flexbox */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item item1">Футер</div>
+  <div class="grid-item item2">Большой блок</div>
+  <div class="grid-item item3">Широкий блок</div>
+  <div class="grid-item item4">Во всю ширину</div>
+  <div class="grid-item item5">Нижний блок</div>
+</div>
+
+</body>
+</html>
